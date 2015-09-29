@@ -1,0 +1,21 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Final project for the AngularJS course",
+  "license": "MIT",
+  "author": {
+    "name": "Pablo Anglat",
+    "email": "panglat@gmail.com"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1"
+  },
+  "dependencies": {
+    "bower": "^1.5.2",
+    "http-server": "^0.8.0"
+  }
+}

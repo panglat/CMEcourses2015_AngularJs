@@ -1,0 +1,26 @@
+{
+  "name": "angular-seed",
+  "description": "Final project for the AngularJS course",
+  "moduleType": "node",
+  "authors": [
+    {
+      "name": "Pablo Anglat",
+      "email": "panglat@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "bootstrap": "~3.3.5"
+  },
+  "private": true
+}
