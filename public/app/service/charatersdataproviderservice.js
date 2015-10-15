@@ -32,7 +32,7 @@ app.service('CharactersDataProviderService', function() {
     self.charaters.push(newCharacter);
   }
 
-  this.getCharater = function(id) {
+  this.getCharacterInternal = function(id) {
     var character = {};
     angular.forEach(self.charaters, function(item, index) {
       if (item.Id == id) {
@@ -42,8 +42,13 @@ app.service('CharactersDataProviderService', function() {
     return character;
   }
 
+  this.getCharacter = function(id) {
+    var character = self.getCharacterInternal(id);
+    return {"Id": character.Id, "Name": character.Name, "Season": character.Season, "Chapter": character.Chapter};
+  }
+
   this.updateCharacter = function(id, name, season, chapter) {
-    var character = self.getCharater(id);
+    var character = self.getCharacterInternal(id);
     character.Name = name;
     character.Season = season;
     character.Chapter = chapter;
