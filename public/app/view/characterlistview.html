@@ -1,0 +1,18 @@
+<h5>Character List View</h5>
+{{error}}
+<table class="table">
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Season</th>
+        <th>Chapter</th>
+    </tr>
+</thead>
+  <tbody>
+    <tr ng-repeat="c in characters | orderBy : 'Name'">
+      <td>{{ c.Name }}</td>
+      <td>{{ c.Season }}</td>
+      <td>{{ c.Chapter }}</td>
+    </tr>
+  </tbody>
+</table>
