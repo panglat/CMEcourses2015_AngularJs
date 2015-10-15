@@ -16,7 +16,7 @@
       <td>{{ c.Season }}</td>
       <td>{{ c.Chapter }}</td>
       <td><a href="#/character/{{c.Id}}">Edit</a></td>
-      <td>Delete</td>
+      <td><a ng-click="deleteCharacter(c.Id)">Delete</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,9 +1,5 @@
-app.controller("CharacterDetailController", ["$scope", "$routeParams", "storage",
-  function($scope, $routeParams, storage) {
-    angular.forEach(storage, function(item, index) {
-      if (item.Id == $routeParams.Id) {
-        $scope.character = item;
-      }
-    });
+app.controller("CharacterDetailController", ["$scope", "$routeParams", "CharactersDataProviderService",
+  function($scope, $routeParams, CharactersDataProviderService) {
+    $scope.character = CharactersDataProviderService.getCharater($routeParams.Id);
   }
 ])
