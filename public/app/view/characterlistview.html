@@ -6,6 +6,8 @@
         <th>Name</th>
         <th>Season</th>
         <th>Chapter</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 </thead>
   <tbody>
@@ -13,6 +15,8 @@
       <td>{{ c.Name }}</td>
       <td>{{ c.Season }}</td>
       <td>{{ c.Chapter }}</td>
+      <td><a href="#/character/{{c.Id}}">Edit</a></td>
+      <td>Delete</td>
     </tr>
   </tbody>
 </table>

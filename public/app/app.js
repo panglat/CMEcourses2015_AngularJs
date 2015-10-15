@@ -1,16 +1,19 @@
 var app = angular.module('necroProdeApp', ["ngRoute"])
         .value("storage", [
           {
+            "Id": 1,
             "Name": "Jon Snow",
             "Season": 4,
             "Chapter": 2
           },
           {
+            "Id": 2,
             "Name": "Ned Stark",
             "Season": 3,
             "Chapter": 4
           },
           {
+            "Id": 3,
             "Name": "Catelyn Stark",
             "Season": 7,
             "Chapter": 6
@@ -18,8 +21,9 @@ var app = angular.module('necroProdeApp', ["ngRoute"])
 
         ])
         .constant("VIEWS", {
+          homeview: "app/view/homeview.html",
           characterlistview: "app/view/characterlistview.html",
-          homeview: "app/view/homeview.html"
+          characterdetailview: "app/view/characterdetailview.html"
         })
         .config(["$routeProvider", "VIEWS", function($routeProvider, VIEWS) {
           $routeProvider.when("/", {
@@ -28,7 +32,10 @@ var app = angular.module('necroProdeApp', ["ngRoute"])
           }).when("/characters", {
             controller: "CharacterListController",
             templateUrl: VIEWS.characterlistview
-          }).otherwise({
+          }).when("/character/:Id", {
+          controller: "CharacterDetailController",
+          templateUrl: VIEWS.characterdetailview
+        }).otherwise({
             redirectTo: "/"
           });
         }]);
