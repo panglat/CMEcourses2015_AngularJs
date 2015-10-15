@@ -33,9 +33,12 @@ var app = angular.module('necroProdeApp', ["ngRoute"])
             controller: "CharacterListController",
             templateUrl: VIEWS.characterlistview
           }).when("/character/:Id", {
-          controller: "CharacterDetailController",
-          templateUrl: VIEWS.characterdetailview
-        }).otherwise({
+            controller: "CharacterDetailController",
+            templateUrl: VIEWS.characterdetailview
+          }).when("/character/", {
+            controller: "CharacterDetailController",
+            templateUrl: VIEWS.characterdetailview
+          }).otherwise({
             redirectTo: "/"
           });
         }]);

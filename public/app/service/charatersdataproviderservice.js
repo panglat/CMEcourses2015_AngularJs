@@ -56,7 +56,4 @@ app.service('CharactersDataProviderService', function() {
     self.charaters = filteredCharacters;
     return self.charaters;
   }
-
-  this.addNewCharacter("Pablo", 3, 5);
-  this.updateCharacter(2, "Ned Stark2", 8, 7);
 });
