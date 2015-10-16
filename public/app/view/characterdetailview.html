@@ -1,4 +1,4 @@
-<h5>character Detail View</h5>
+<h2>Character Detail</h2>
 <form name="characterForm">
 <div>
   <dl>
@@ -11,14 +11,12 @@
     <dd><input type="number" name="input" ng-model="character.Chapter" min="1" max="30" required></dd>
   </dl>
 </div>
-<div ng-show="newCharacter">
-  <a ng-click="addNewCharacter()">Add</a>
-</div>
-<div ng-hide="newCharacter">
-  <a ng-click="updateCharacter()">Update</a>
-</div>
+<p>
+  <a class="btn btn-info" ng-click="addNewCharacter()" ng-show="newCharacter" style="margin: 10px;">Add</a>
+  <a class="btn btn-info" ng-click="updateCharacter()" ng-hide="newCharacter" style="margin: 10px;">Update</a>
+  <a class="btn btn-info" href="#/characters" style="margin: 10px;">Cancel</a>
+</p>
 </form>
-<a href="#/characters">Cancel</a>
 <div ng-hide="newCharacter">
   <div><h2>{{title}} in Wikipedia</h2>
   <div>

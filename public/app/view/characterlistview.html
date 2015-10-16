@@ -1,6 +1,6 @@
-<h5>Character List View</h5>
+<h2>Character List</h2>
 {{error}}
-<a href="#/character">Add a new character</a>
+<a class="btn btn-info" href="#/character" style="float: right;">Add a new character</a>
 <table class="table">
   <thead>
     <tr>
@@ -16,8 +16,8 @@
       <td>{{ c.Name }}</td>
       <td>{{ c.Season }}</td>
       <td>{{ c.Chapter }}</td>
-      <td><a href="#/character/{{c.Id}}">Edit</a></td>
-      <td><a ng-click="deleteCharacter(c.Id)">Delete</a></td>
+      <td><a class="btn btn-info" href="#/character/{{c.Id}}">Edit</a></td>
+      <td><button type="button" class="btn btn-info" ng-click="deleteCharacter(c.Id)">Delete</a></td>
     </tr>
   </tbody>
 </table>
